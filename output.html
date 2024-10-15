@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Output</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .output-container {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .output-container img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .output-container h3 {
+            text-align: center;
+            margin-top: 10px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="output-container" id="outputContainer">
+    <img id="outputImage" src="" alt="Photograph">
+    <h3 id="outputName"></h3>
+    <p><strong>ID Number:</strong> <span id="outputID"></span></p>
+    <p><strong>Sex:</strong> <span id="outputSex"></span></p>
+    <p><strong>Age:</strong> <span id="outputAge"></span></p>
+    <p><strong>Email:</strong> <span id="outputEmail"></span></p>
+    <p><strong>Address:</strong> <span id="outputAddress"></span></p>
+    <p><strong>Phone Number:</strong> <span id="outputNumber"></span></p>
+    <p><strong>Church:</strong> <span id="outputChurch"></span></p>
+    <p><strong>Marital Status:</strong> <span id="outputMaritalStatus"></span></p>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Retrieve data from session storage
+        const data = JSON.parse(sessionStorage.getItem('userData'));
+
+        if (data) {
+            document.getElementById('outputName').textContent = `${data.firstName} ${data.middleName} ${data.lastName}`;
+            document.getElementById('outputID').textContent = data.id;
+            document.getElementById('outputSex').textContent = data.sex;
+            document.getElementById('outputAge').textContent = data.age;
+            document.getElementById('outputEmail').textContent = data.email;
+            document.getElementById('outputAddress').textContent = data.address;
+            document.getElementById('outputNumber').textContent = data.number;
+            document.getElementById('outputChurch').textContent = data.church;
+            document.getElementById('outputMaritalStatus').textContent = data.maritalStatus;
+            document.getElementById('outputImage').src = data.photo;
+
+            // Clear session storage after displaying data
+            sessionStorage.removeItem('userData');
+        } else {
+            // Redirect back to the form if no data is found
+            window.location.href = 'index.html';
+        }
+    });
+
+    // Automatically trigger print dialog
+    window.print();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+.navbar{
+    background-color: #fff;
+    height: 100px;
+    box-shadow: 0px 2px 7px;
+    height: 150px;
+   top: 0%; 
+   position: sticky;
+}
+
+a{
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.dropdown-item{
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: larger;
+}
+.nav-link {
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: larger;
+}
+
+a:hover{
+    color: red;
+}
+
+.navbar-nav{
+    float: right;
+}
+
+.container-1{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size:300%;
+    padding-top: 100px;
+    background-image: url("https://img.freepik.com/premium-photo/open-book-bible-light-blue-background-generative-ai_959624-11955.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    color: #fff;
+    
+}
+/* logoimg */
+
+
+/* pros */
+  .pros {
+		padding: 5px 6px 10px 6px;
+		text-align: center;
+        
+	}
+	
+  .pros-container {
+    background-color: #fff;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    
+	}
+	
+	.pros-item {
+		margin: 20px;
+		text-align: center;
+    position: relative; top: 10px;
+	}
+	
+	.pros-item img {
+		width: 75px;
+		height: 75px;
+        margin-bottom: 10px;
+        
+	}
+
+        .pros-item span {
+        font-size: 16px;
+        float: right;
+        text-align: left;
+        line-height: 10px;
+        position: relative; bottom: 6px; left: 10px;
+        padding-top: 30px;
+        }
+        
+        /* Mobile view */
+        @media only screen and (max-width: 600px) {
+            .pros-container {
+                flex-direction: column;
+          padding: 20px;
+            }
+            .pros-item {
+                margin-bottom: 20px;
+          margin-right: auto;
+            }
+             
+        }
+        
+        /* Desktop view */
+        @media only screen and (min-width: 768px) {
+            .pros-container {
+            flex-direction:row;
+            }
+            .pros-item {
+                margin-right: 100px;
+            }
+        }
+    
+    
+
+
+        /* footer */
+        footer{
+          padding:20px;
+          color:#ffffff;
+          background-color:#007bff;
+          text-align: center;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 600;
+          bottom: 0;
+        position: sticky;
+        }
+
+
+
+
+
+
+        /* modal */
+
+        .modal-dialog{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            font-size: larger;
+        }
+
+       /* FORM */
+
+        body{
+            background-color:#fff;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        
+        .container-2{
+            height: 510px;
+            width: 310px;
+            background-color:#fff;
+            margin: auto;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 5px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            box-shadow: 2px 0px 10px black;
+        }
+        h2{
+            color: rgb(0, 60, 255);
+        
+        }
+        .pforget{
+            font-family: sans-serif;
+            color:  rgb(0,60,255);
+            text-emphasis: bold;
+            
+        }
+        
+        .myinput{
+            text-align: center;
+            margin-top: 10px;
+        }
+        input{
+            height: 30px;
+            width: 290px;
+            border-radius: 5px;
+        
+        }
+        
+        a{
+            text-decoration: none;
+            color:rgb(0, 60, 255) ;
+        
+        }
+        
+        .stay{
+            font-size: small;
+            font-weight: lighter;
+        }
+        input::placeholder{padding-left: 2px;
+        outline: none;
+        border: 1px;
+        }
+        
+        
+        .btn-2{
+            height: 35px;
+            width: 290px;
+            border-radius: 15px;
+            margin-left: 4px;
+            background-color: blue;
+            color: #ffffff;
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 500%;
+            border: none;
+            cursor: pointer;
+            font-size: large;
+            
+        }
+        
+         .btn-2:hover{
+            background-color: red;
+         }
+        .logo{
+            color: #fff;
+            background-color:rgb(0, 60, 255) ;;
+            font-family: sans-serif;
+            padding: 2px 10px;
+            font-weight: 900;
+            height: 100px;
+        }
+        
+        .New{
+            margin-top: 35px; 
+        }
+
+        h1{
+            color:rgb(0, 60, 255) ;
+            font-weight: 600;
+        }
+        footer span{
+            color: red;
+        }
+
+
+         /* GALLERY PAGE */
+     
+        .gallery-container {
+            padding: 20px;
+        }
+
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #007bff;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
